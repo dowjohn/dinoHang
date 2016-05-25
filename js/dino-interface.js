@@ -4,3 +4,7 @@ var getDinos = $.get('http://dinoipsum.herokuapp.com/api/?format=text&paragraphs
 });
 
 //Business logic
+dinoSplit = function(dinoAnswer){
+  dinoArray = dinoAnswer.split("", dinoAnswer.length - 3);
+  return dinoArray;
+}
