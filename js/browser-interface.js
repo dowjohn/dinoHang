@@ -1,12 +1,5 @@
-var pingPong = require('./../js/ping-pong.js').pingPong;
+var dinoAPI = require('./../js/dino-interface.js').dinoAPI;
 
 $(document).ready(function(){
-  $('#ping-pong').submit(function(event){
-    event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element){
-      $('#solution').append("<li>" + element + "</li>");
-    });
-  });
+  $('#test').text("lol no dinos");
 });
