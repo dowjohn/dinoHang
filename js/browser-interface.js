@@ -21,7 +21,9 @@ $(document).ready(function(){
     var dinoNumber = $('#dinoInput').val();
     if (dinoNumber == dinoCount()) {
       $('#rightDino').show();
-      $('#dinoResult').text('correct!');
+      $('#dinoResult').text('CORRECT!');
+
+      $('#wrongDinoCounter').hide();
     } else if (dinoNumber < dinoCount()) {
       $('#rightDino').show();
       $('#dinoResult').text('get higher, so the raptors do not eat you');
@@ -37,14 +39,11 @@ $(document).ready(function(){
       $('#dinoResult').text('breh sumthins up');
     };
 
-     $('#wrongDinoCounter').text(wrongDino);
+     $('#wrongDinoCounter').text(wrongDino + " Incorrect");
 
     if (wrongDino == 10) {
       $('#gameOver').show();
     }
 
   });
-
-
-
 });
