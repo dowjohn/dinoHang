@@ -3,6 +3,8 @@ $(document).ready(function(){
 
   $('#rightDino').hide();
 
+  $('#gameOver').hide();
+
   $('#form1').submit(function(event){
     event.preventDefault();
     $("#dinoHere").text(dinoAnswer);
@@ -11,6 +13,8 @@ $(document).ready(function(){
 
     setInterval(showDinoInput, 5000);
   });
+
+  wrongDino = 0;
 
   $('#form2').submit(function(event){
     event.preventDefault();
@@ -21,13 +25,24 @@ $(document).ready(function(){
     } else if (dinoNumber < dinoCount()) {
       $('#rightDino').show();
       $('#dinoResult').text('get higher, so the raptors do not eat you');
+
+      wrongDino += 1;
     } else if (dinoNumber > dinoCount()) {
       $('#rightDino').show();
       $('#dinoResult').text('get lower, so the pterodactyls do not eat you');
+
+      wrongDino += 1;
     } else {
       $('#rightDino').show();
       $('#dinoResult').text('breh sumthins up');
     };
+
+     $('#wrongDinoCounter').text(wrongDino);
+
+    if (wrongDino == 10) {
+      $('#gameOver').show();
+    }
+
   });
 
 
