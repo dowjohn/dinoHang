@@ -12,12 +12,12 @@ dinoThunder = function(dinoAnswer) {
 
 dinoHide = function() {
   $("#dinoHere").hide();
-}
+};
 
 showDinoInput = function() {
   $('#guessDinos').show();
-}
+};
 
 dinoCount = function() {
   return dinoArray = dinoAnswer.split(" ").length;
-}
+};
